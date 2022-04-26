@@ -11,7 +11,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 #[ORM\Entity(repositoryClass: BouyRepository::class)]
 #[ORM\HasLifecycleCallbacks()]
 #[ORM\Table("bouy")]
-class Bouy
+class  Bouy
 {
     use TimestampableEntity;
 

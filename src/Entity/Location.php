@@ -20,10 +20,10 @@ class Location
     private $id;
 
     #[ORM\Column(type: 'float')]
-    private $coordinate_x;
+    private $coordinateX;
 
     #[ORM\Column(type: 'float')]
-    private $coordinate_y;
+    private $coordinateY;
 
     #[ORM\ManyToOne(targetEntity: Bouy::class, inversedBy: 'locations')]
     #[ORM\JoinColumn(nullable: false)]
@@ -36,24 +36,24 @@ class Location
 
     public function getCoordinateX(): ?float
     {
-        return $this->coordinate_x;
+        return $this->coordinateX;
     }
 
-    public function setCoordinateX(float $coordinate_x): self
+    public function setCoordinateX(float $coordinateX): self
     {
-        $this->coordinate_x = $coordinate_x;
+        $this->coordinateX = $coordinateX;
 
         return $this;
     }
 
     public function getCoordinateY(): ?float
     {
-        return $this->coordinate_y;
+        return $this->coordinateY;
     }
 
-    public function setCoordinateY(float $coordinate_y): self
+    public function setCoordinateY(float $coordinateY): self
     {
-        $this->coordinate_y = $coordinate_y;
+        $this->coordinateY = $coordinateY;
 
         return $this;
     }

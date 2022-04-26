@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Bouy;
+use App\Entity\Location;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -46,7 +47,8 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToCrud('Bouy', 'fas fa-list', Bouy::class);
+        yield MenuItem::linkToCrud('Bouys', 'fas fa-list', Bouy::class);
+        yield MenuItem::linkToCrud('Locations', 'fas fa-list', Location::class);
     }
 
     public function configureActions(): Actions
